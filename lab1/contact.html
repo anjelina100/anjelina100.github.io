@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #header {
+            width: 100%;
+            background-color: rgb(121, 55, 55);
+            padding: 40px 0;
+        }
+
+        #header h1 {
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #navbar {
+            width: 100%;
+            background-color: rgb(185, 165, 120);
+            /* gold/tan bar */
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 2px solid #999;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+        }
+
+        hr.solid {
+            border-top: 2px solid #999;
+            margin: 30px 0;
+        }
+
+        #footer {
+            background-color: black;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #c4b9b9;
+        }
+
+        #csumb-logo {
+            width: 120px;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Contact</h1>
+    </header>
+    <hr class="solid">
+    <nav id="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="form-container">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdLzrL68DMnAEjrHk8iaI6QufLjp6GxbcVzxiOilv3mw4EjHg/viewform?embedded=true"
+            width="640" height="554" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    </div>
+
+    <hr class="solid">
+    <footer id="footer">
+        <img id="csumb-logo" src="img/csumb.jpeg" alt="CSUMB Logo">
+        <p>CST336 Internet Programming. 2026 © Jasso, Hernandez, Hopper, Khidar</p>
+        <p><strong>Disclaimer:</strong> The information in this page is fictitious.</p>
+        <p>It is used for academic purposes only.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    img {
+        width: 100%;
+        border-radius: 25px;
+        border: 10px double black;
+    }
+
+    #header {
+        background-color: rgb(121, 55, 55);
+        padding: 40px 0;
+    }
+
+    #header h1 {
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #team {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    .member {
+        width: 20%;
+        text-align: center;
+    }
+
+    figcaption {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .member img:hover {
+        transform: scale(1.05);
+    }
+
+    #welcome {
+        text-align: center;
+        margin: 60px auto;
+        width: 70%;
+    }
+
+    #navbar {
+        background-color: rgb(185, 165, 120);
+        padding: 15px 0;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .nav-link {
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        padding: 10px 25px;
+        border: 2px solid #999;
+        font-weight: bold;
+    }
+
+    .nav-link:hover {
+        background-color: #555;
+    }
+
+    hr.solid {
+        border-top: 2px solid #999;
+        margin: 30px 0;
+    }
+
+    #footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 40px;
+        font-size: 0.85rem;
+        color: #c4b9b9;
+    }
+
+    #csumb-logo {
+        width: 120px;
+        border: none;
+        border-radius: 0;
+        margin-bottom: 15px;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1: Team Portfolio</title>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Team Alpha</h1>
+    </header>
+    <hr class="solid">
+    <nav id="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div id="team">
+        <figure class="member">
+            <img src="img/pic1.jpg" alt="Alejandro">
+            <figcaption>Alejandro</figcaption>
+        </figure>
+
+        <figure class="member">
+            <img src="img/pic2.jpg" alt="Anjelina">
+            <figcaption>Anjelina</figcaption>
+        </figure>
+
+        <figure class="member">
+            <img src="img/pic3.jpg" alt="Imane">
+            <figcaption>Imane</figcaption>
+        </figure>
+
+        <figure class="member">
+            <img src="img/pic4.jpg" alt="Ryan">
+            <figcaption>Ryan</figcaption>
+        </figure>
+    </div>
+    <section id="welcome">
+        <p>Hello! Thank you so much for visiting our website. We hope you enjoyed learning who we are.</p>
+        <p>"With great power comes great responsibility" - Ben Parker</p>
+    </section>
+    <footer id="footer">
+        <img id="csumb-logo" src="img/csumb.jpeg" alt="CSUMB Logo">
+        <p>CST336 Internet Programming. 2026 © Jasso, Hernandez, Hopper, Khidar</p>
+        <p><strong>Disclaimer:</strong> The information in this page is fictitious.</p>
+        <p>It is used for academic purposes only.</p>
+    </footer>
+</body>
+
+</html>

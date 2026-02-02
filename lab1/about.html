@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1: Team portfolio</title>
+    <style>
+        #header {
+            width: 100%;
+            background-color: rgb(121, 55, 55);
+            padding: 40px 0;
+        }
+
+        #header h1 {
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #navbar {
+            width: 100%;
+            background-color: rgb(185, 165, 120);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-link {
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border: 2px solid #999;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+        }
+
+        .nav-link.active {
+            background-color: white;
+            color: #111;
+            border-color: #111;
+        }
+
+        hr.solid {
+            border-top: 2px solid #999;
+            margin: 30px 0;
+        }
+
+        #footer {
+            background-color: black;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            font-size: 0.85rem;
+            color: #c4b9b9;
+        }
+
+        #csumb-logo {
+            width: 120px;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 15px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        #about-content {
+            background-color: #0b2d5c;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #skills-table {
+            margin: 0 auto 30px auto;
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        #skills-table th,
+        #skills-table td {
+            border: 2px solid #999;
+            padding: 12px;
+            text-align: center;
+        }
+
+        #skills-table th {
+            background-color: #e6e6e6;
+        }
+
+        #hobbies {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #hobbies ul {
+            list-style-position: inside;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1>Team Alpha</h1>
+    </header>
+    <nav id="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <main id="about-content">
+
+        <table id="skills-table">
+            <tr>
+                <th>Programming Languages</th>
+                <th>Years Experienced</th>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>0.5</td>
+            </tr>
+        </table> <br>
+
+        <section id="hobbies">
+            <h2><strong>Our Interests </strong></h2>
+            <ul>
+                <li>Playing drums</li>
+                <li>Travelling</li>
+                <li>Hiking</li>
+                <li>Listening to music</li>
+            </ul>
+        </section>
+        <footer id="footer">
+            <img id="csumb-logo" src="img/csumb.jpeg" alt="CSUMB Logo">
+            <p>CST336 Internet Programming. 2026 © Jasso, Hernandez, Hopper, Khidar</p>
+            <p><strong>Disclaimer:</strong> The information in this page is fictitious.</p>
+            <p>It is used for academic purposes only.</p>
+        </footer>
+</body>
+
+</html>
