@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(6, 48, 6);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#page {
+    background-color: rgb(238, 230, 230);
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 22px;
+}
+
+#navbar {
+    background: white;
+    margin: 18px auto 0;
+    width: 92%;
+    border-radius: 999px;
+    padding: 12px 18px;
+    display: flex;
+    justify-content:center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.nav-center {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 999px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+#header h1 {
+    margin: 0;
+    color: rgb(115, 49, 49);
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#content {
+    padding: 30px 40px;
+    line-height: 1.6;
+}
+#content ul {
+    margin-left: 20px;
+}
+#content ul li {
+    margin-bottom: 10px;;
+}
+#header {
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 14px;
+}
+.header-home {
+    background-image: url("img/databack.png");
+}
+
+.tool-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.tool-card {
+  width: calc(50% - 9px);
+  background-color: white;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.tool-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid rgba(0,0,0,0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+.header-importance {
+    background-image: url("img/space.jpg");
+}
