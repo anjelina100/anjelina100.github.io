@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: min(700px, 95vw);
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0 0 18px 0;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input {
+  width: 120px;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+button {
+  padding: 9px 14px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+#resetBtn {
+  background: #111827;
+}
+
+.line {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.stats {
+  background: #f9fafb;
+  border: 1px dashed #d1d5db;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#userGuesses {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: yellow;
+  color: red;
+  font-weight: bold;
+}
+
+.message {
+  margin-top: 14px;
+  font-weight: 800;
+  font-size: 22px;
+  min-height: 28px;
+}
