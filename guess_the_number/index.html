@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number!</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <main class="card">
+    <h1>Guess the Number!</h1>
+
+    <div class="row">
+      <label for="userGuess">Guess:</label>
+      <input id="userGuess" type="number" min="0" max="99" placeholder="0–99" />
+      <button id="guessBtn">Guess!</button>
+      <button id="resetBtn" style="display:none;">Reset</button>
+    </div>
+
+    <p class="line">
+      Previous Guesses:
+      <span id="userGuesses"></span>
+    </p>
+
+    <p class="line stats">
+      Won: <span id="wins">0</span> |
+      Lost: <span id="losses">0</span> |
+      Attempts: <span id="attempts">0</span>/7
+    </p>
+
+    <p id="message" class="message"></p>
+  </main>
+
+</body>
+</html>
