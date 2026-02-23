@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3: Quiz</title>
+    <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
+    <script src ="js/script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1> CSS Quiz</h1>
+    <p id = "timesTaken"></p>
+
+    <div class = "question">
+        1. What is the CSS property to set the font color?
+        <div id = "q1ChoicesDiv"></div>
+        <div class = "feedback" id = "q1Feedback"></div>
+    </div>
+
+    <br>
+
+    <div class="question">
+        2. Which is the correct CSS property to change the background color?
+        <input type="text" id ="q2">
+        <div class = "feedback" id = "q2Feedback"></div>
+    </div>
+    <br>
+    <div class="question">
+        3. Which of the following are valid things to write in JavaScript? (select all that apply)
+        <label><input type="checkbox" name="q3" value="querySelector"> querySelector</label>
+        <label><input type="checkbox" name="q3" value="innerHTML"> innerHTML</label>
+        <label><input type="checkbox" name="q3" value="function"> function</label>
+        <label><input type="checkbox" name="q3" value="attached"> attached</label>
+        <div class = "feedback" id = "q3Feedback"></div>
+    </div>
+    <br>
+    <div class="question">
+        4. Which value of the following is a color that starts with the letter b?
+        <select id="q4">
+            <option value="">-- Select an answer --</option>
+            <option value="orange">orange</option>
+            <option value="blue">blue</option>
+            <option value="yellow">yellow</option>
+            <option value="red">red</option>
+        </select>
+        <div class="feedback" id="q4Feedback"></div>
+    </div>
+
+    <br>
+
+    <div class="question">
+        5. How many CSS properties were mandatory for this assignment?
+        <input type="number" id="q5">
+        <div class="feedback" id="q5Feedback"></div>
+    </div>
+
+    <button>Submit Quiz</button>
+
+    <p id = "score"></p>
+    <p id = "congrats"></p>
+
+
+</body>
+</html>

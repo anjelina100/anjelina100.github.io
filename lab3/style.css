@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+    background-color: #fff5f5;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.question {
+    font-weight: bold;
+    margin: 20px auto;
+    width: 500px;
+}
+
+.feedback {
+    display: inline;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.feedback img {
+    width: 15px;
+    height: 15px;
+}
+
+button {
+    font-size: 20px;
+    padding: 12px 30px;
+    background-color: #fdfd96;
+    color: black;
+    border: 1px solid black;
+
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+#congrats {
+    font-size: 36px;
+    font-weight: bold;
+}
