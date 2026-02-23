@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Artist</title>
+    <link rel = "stylesheet" href = "style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id = "score">
+        Score: 
+        <span id = "scoreNum">0</span>
+    </div>
+    <div id = "home">
+        <h1> Guess The Artist!</h1>
+        <p id="questionCounter">Question 1 of 5</p>
+        <img id="artPics" src="https://drawpaintacademy.com/wp-content/uploads/2017/11/15.-Claude-Monet-Water-Lilies-1905.jpg">
+        <div id = "buttons"> 
+            <button class="choiceBtn" id="btn1">Claude Monet</button>
+            <button class="choiceBtn" id="btn2">Vincent Van Gogh</button>
+            <button class="choiceBtn" id="btn3">Pablo Picasso</button>
+            <button id="nextBtn" disabled>Next</button>
+        </div>
+        <p id="response"></p>
+    </div>
+    <div id="gameOver">
+        <p> Your Score: <span id="finalScore"></span> /5</p>
+        <button id="restartBtn">Play Again</button>
+    </div>
+</body>
+</html>
