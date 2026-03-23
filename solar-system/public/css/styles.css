@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background-color: azure;
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding:0;
+}
+.nasa-media {
+    height: 400px;
+    width: 300px;
+    border-radius: 5px;
+}
+nav {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+footer {
+    background-color: bisque;
+    color: black;
+}
