@@ -1,20 +1,28 @@
 body {
-    text-align: center;
-    background-color: azure;
-    font-family:'Times New Roman', Times, serif;
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
-    padding:0;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-.nasa-media {
-    height: 400px;
-    width: 300px;
-    border-radius: 5px;
+
+h1 {
+    color:black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-nav {
-    font-size: 15px;
-    letter-spacing: 1px;
+form {
+    background-color:burlywood;
+    border-radius: 10px;;
+}
+button {
+    cursor: pointer;
+    border-radius: 5px;;
 }
 footer {
-    background-color: bisque;
     color: black;
+    margin-top: auto;
 }

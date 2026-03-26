@@ -1,56 +1,68 @@
 import express from 'express';
-const planets = (await import('npm-solarsystem')).default;
-
+import mysql from 'mysql2/promise';
 const app = express();
-app.set("view engine", "ejs");
-app.use(express.static("public"));
-
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
+//for Express to get values using the POST method
+app.use(express.urlencoded({extended:true}));
+//setting up database connection pool, replace values in red
+const pool = mysql.createPool({
+    host: "sh4ob67ph9l80v61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "w9c7lwn8um1o99yj",
+    password: "u3rw8lbcasz2h307",
+    database: "pyn5h5u7iu857dd2",
+    connectionLimit: 10,
+    waitForConnections: true
+});
 //routes
-//root route
-app.get('/', async(req, res) => {
-   const url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=solar%20system";
-   const response = await fetch(url);
-   let data = await response.json();
-   let num = Math.floor(Math.random() * 50);
-   let randImg = data.hits[num].webformatURL;
-   res.render('home.ejs', {randImg})
-});
-
-app.get('/planetInfo', (req, res) => {
-    let planet = req.query.planet;
-    let planetInfo = planets[`get${planet}`]();
-    res.render('planet.ejs', {planetInfo, planet})
-});
-app.get('/nasa', async (req, res) => {
-   let image = req.query.image;
-   let today = new Date();
-   let yr = today.getFullYear();
-   let month = today.getMonth() + 1;
-   let day = today.getDate();
-
-   if (month < 10) {
-      month = "0" + month;
-   }
-   if (day < 10) {
-      day = "0" + day;
-   }
-
-    const url = `https://api.nasa.gov/planetary/apod?api_key=9mUzIkhlZCZaOoMfspg7jMmwZCZ4LiRHtkgkambD&date=${yr}-${month}-${day}`;
-    const response = await fetch(url); 
-    let data = await response.json();
-    console.log(data);
-    let nasaInfo = data;
-    res.render('nasa.ejs', {nasaInfo} )
+app.get('/', async (req, res) => {
+   let sql = `SELECT authorId, firstName, lastName
+              FROM authors
+              ORDER BY lastName`;
+   const [authors] = await pool.query(sql);              
+   res.render('home.ejs', {authors})
 });
 
 
-//app.get('/mercury', (req, res) => {
-//    let mercuryInfo = planets.getMercury();
-//    console.log(mercuryInfo);
-//    res.render('mercury.ejs', {mercuryInfo})
-//});
-
-
-app.listen(3000, () => {
-   console.log('server started');
+app.get('/searchByAuthor', async (req, res) => {
+   let authorId = req.query.authorId;
+   let sql = `SELECT authorId, quote, firstName, lastName
+             FROM quotes
+             NATURAL JOIN authors
+             WHERE authorId = ?`;
+   let sqlParams = [authorId];
+   const [rows] = await pool.query(sql, sqlParams);              
+   res.render('quotes.ejs', {rows})
 });
+//Searching quotes by keyword
+//NEVER have user input within the SQL statement!!
+app.get("/searchByKeyword", async(req, res) => {
+   try {
+        //console.log(req);
+        let keyword = req.query.keyword;
+        let sql = `SELECT quote, firstName, lastName
+                   FROM quotes
+                   NATURAL JOIN authors
+                   WHERE quote LIKE ? `;
+        let sqlParams = [`%${keyword}%`];
+        const [rows] = await pool.query(sql, sqlParams);
+        res.render("quotes.ejs", {rows});
+    } catch (err) {
+        console.error("Database error:", err);
+        res.status(500).send("Database error!");
+    }
+});//dbTest
+
+
+app.get("/dbTest", async(req, res) => {
+   try {
+        const [rows] = await pool.query("SELECT CURDATE()");
+        res.send(rows);
+    } catch (err) {
+        console.error("Database error:", err);
+        res.status(500).send("Database error!");
+    }
+});//dbTest
+app.listen(3000, ()=>{
+    console.log("Express server running")
+})

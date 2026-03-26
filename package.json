@@ -1,5 +1,5 @@
 {
-  "name": "solar-system",
+  "name": "famous-quotes",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,6 @@
   "dependencies": {
     "ejs": "^5.0.1",
     "express": "^5.2.1",
-    "npm-solarsystem": "^1.1.5"
+    "mysql2": "^3.20.0"
   }
 }
