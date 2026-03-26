@@ -1,0 +1,28 @@
+body {
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color:black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+form {
+    background-color:burlywood;
+    border-radius: 10px;;
+}
+button {
+    cursor: pointer;
+    border-radius: 5px;;
+}
+footer {
+    color: black;
+    margin-top: auto;
+}
