@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="title"> Episode Locations</h1>
+    <%- include("partials/nav.ejs") %>
+
+    <main class="locations-container">
+        <% locations.forEach(location => { %>
+            <div class="location-card">
+                <div class="location-name"><%= location.name %></div>
+                <div class="location-detail">Type: <%= location.type %></div>
+                <div class="location-detail">Dimension: <%= location.dimension %></div>
+            </div>
+        <% }) %>
+    </main>
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

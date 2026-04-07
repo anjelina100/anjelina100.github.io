@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="title">Rick & Morty App</h1>
+    <%- include("partials/nav.ejs") %>
+
+    <img src="https://m.media-amazon.com/images/M/MV5BZGQyZjk2MzMtMTcyNC00NGU3LTlmNjItNDExMWM4ZDFhYmQ2XkEyXkFqcGc@._V1_.jpg" class="home-image">
+
+    <div class="chance-info">
+        <p><strong>Fantasy Character Name:</strong> <%= sampleName %></p>
+        <p><strong>Fantasy Origin Planet:</strong> <%= sampleCity %></p>
+        <p><strong>Fantasy Description:</strong> <%= sampleSentence %></p>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

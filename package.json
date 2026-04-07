@@ -1,0 +1,19 @@
+{
+  "name": "hw3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.14.0",
+    "chance": "^1.1.13",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
+  }
+}

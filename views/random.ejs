@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="title">Random Character</h1>
+    <%- include("partials/nav.ejs") %>
+
+    <div>
+        <img src="<%= character.image %>">
+        <p><%= character.name %></p>
+        <p>Gender: <%= character.gender %></p>
+        <p>Origin: <%= character.origin.name %></p>
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
