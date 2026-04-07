@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("partials/head.ejs") %>
+</head>
+
+<body>
+    <h1 class="title"> Search For A Character </h1>
+    <%- include("partials/nav.ejs")%>
+
+    <form action="/search" method="GET">
+        <label for="name">Character Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Search</button>
+    </form>
+
+        <% characters.forEach(character => { %>
+            <div>
+                <img src="<%= character.image %>">
+                <p><%= character.name %></p>
+                <p>Gender: <%= character.gender %></p>
+                <p>Origin: <%= character.origin.name %></p>
+            </div>
+        <% }) %>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
